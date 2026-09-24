@@ -1,0 +1,39 @@
+name: toposign
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+    # ── Deep learning ──────────────────────────────────────────────────────────
+    - torch==2.11.0
+    - torchvision==0.26.0
+    - torchaudio==2.11.0
+    - torchmetrics==1.9.0
+
+    # ── Graph learning ─────────────────────────────────────────────────────────
+    # torch-scatter and torch-sparse require matching PyTorch + CUDA builds.
+    # For CUDA 13.x / PyTorch 2.11:
+    #   pip install torch-scatter torch-sparse \
+    #       -f https://data.pyg.org/whl/torch-2.11.0+cu130.html
+    - torch-geometric==2.7.0
+    - torch-geometric-signed-directed==1.1.1
+    # torch-scatter and torch-sparse are installed separately (see above)
+
+    # ── Topological data analysis ──────────────────────────────────────────────
+    - gudhi==3.12.0          # Dowker complex + persistence diagram computation
+    - persim==0.3.8          # Persistence images vectorization
+
+    # ── Scientific computing ───────────────────────────────────────────────────
+    - numpy==2.4.4
+    - scipy==1.17.1
+    - scikit-learn==1.8.0
+    - networkx==3.6.1
+    - pandas==3.0.2
+    - matplotlib==3.10.9
+
+    # ── Utilities ─────────────────────────────────────────────────────────────
+    - tqdm==4.67.3
+    - pyyaml==6.0.3
+    - joblib==1.5.3
+    - ogb==1.3.6              # Open Graph Benchmark (dataset utilities)
