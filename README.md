@@ -1,6 +1,6 @@
 # TopoSIGN
 
-> This is the codebase for the LoG 2026 paper **“Signed Graph Pre-Training and Prompt Learning.”**
+> This is the codebase for the Learning on Graphs Conference(LoG) 2026 paper **“Signed Graph Pre-Training and Prompt Learning.”**
 
 <p align="center">
   <img src="figures/toposign_framework.png">
@@ -10,9 +10,7 @@
   <b>Overall framework of TopoSIGN</b>
 </p>
 
-TopoSIGN is a topology-guided graph pre-training and prompt learning framework for signed graphs. It learns transferable node representations through two complementary branches: a signed graph encoder (SGE) that captures signed, directional, and local structural information, and a topological representation learning (TPL) branch that summarizes higher-order signed structures using Dowker-complex persistence images. The two representations are fused for pre-training and downstream prompt-based adaptation.
-
-**TopoSIGN** is a graph foundation model for signed directed graphs that combines a signed graph encoder (SGE) with a Topological Projection Layer (TPL) built on Dowker persistence images. Two instantiations are provided:
+**TopoSIGN** is a topology-guided graph pre-training and prompt learning framework for signed graphs. It learns transferable node representations through two complementary branches: a signed graph encoder (SGE) that captures signed, directional, and local structural information, and a topological representation learning (TPL) branch that summarizes higher-order signed structures using Dowker-complex persistence images. The two representations are fused for pre-training and downstream prompt-based adaptation. Two instantiations are provided:
 
 - **TopoMSGNN** — MSGNN backbone + TPL
 - **TopoSSSNET** — SSSNET backbone + TPL
